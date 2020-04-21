@@ -1,16 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>ddjf</groupId>
-    <artifactId>ProDemo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+	<groupId>com.example</groupId>
+	<artifactId>demo</artifactId>
+	<version>${revision}</version>
+	<packaging>pom</packaging>
+	<description>dubbo genenice invoke demo</description>
 
-	    <modules>
-        <module>spring-boot-api</module>
-        <module>spring-boot-consumer</module>
-        <module>spring-boot-provider</module>
-    </modules>
+	<properties>
+		<revision>0.0.1-SNAPSHOT</revision>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.jdk.version>1.8</project.build.jdk.version>
+		<spring.boot.version>2.7.6</spring.boot.version>
+		<dubbo.version>2.7.3</dubbo.version>
+		<netty.version>4.1.48.Final</netty.version>
+		<apache.common.version>3.10</apache.common.version>
+		<apache.commons-io.version>2.6</apache.commons-io.version>
+		<apache.common-math3.version>3.6.1</apache.common-math3.version>
+		<apache.xmlsec.version>2.1.5</apache.xmlsec.version>
+		<apache.commons-codec.version>1.14</apache.commons-codec.version>
+		<google.guava.version>28.2-jre</google.guava.version>
+		<cycastle.bcp.version>1.65</cycastle.bcp.version>
+	</properties>
+
+
+	<modules>
+		<module>spring-boot-api</module>
+		<module>spring-boot-consumer</module>
+		<module>spring-boot-provider</module>
+	</modules>
+
+
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo -->
+			<!-- <dependency>
+				<groupId>org.apache.dubbo</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
+			</dependency> -->
+			<!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter -->
+			<!-- <dependency>
+				<groupId>org.apache.dubbo</groupId>
+				<artifactId>dubbo-spring-boot-starter</artifactId>
+				<version>${dubbo.version}</version>
+			</dependency> -->
+
+
+
+			<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+			<!-- <dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-all</artifactId>
+				<version>${netty.version}</version>$NO-MVN-MAN-VER$
+			</dependency> -->
+
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+			<!-- <dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${apache.common.version}</version>$NO-MVN-MAN-VER$
+			</dependency> -->
+
+			<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+			<!-- <dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${apache.commons-io.version}</version>
+			</dependency> -->
+
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+			<!-- <dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-math3</artifactId>
+				<version>${apache.common-math3.version}</version>
+			</dependency> -->
+
+			<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+			<!-- <dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${google.guava.version}</version>
+			</dependency> -->
+
+			<!-- https://mvnrepository.com/artifact/org.apache.santuario/xmlsec -->
+			<!-- <dependency>
+				<groupId>org.apache.santuario</groupId>
+				<artifactId>xmlsec</artifactId>
+				<version>${apache.xmlsec.version}</version>
+			</dependency> -->
+
+
+			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+			<!-- <dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>${apache.commons-codec.version}</version>
+			</dependency> -->
+
+
+
+			<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+			<!-- <dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${ali.fastjson.version}</version>
+			</dependency> -->
+
+			<!-- https://mvnrepository.com/artifact/com.alibaba/transmittable-thread-local -->
+			<!-- <dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>transmittable-thread-local</artifactId>
+				<version>${ali.ttl.version}</version>
+			</dependency> -->
+
+			<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
+			<!-- <dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk15on</artifactId>
+				<version>${cycastle.bcp.version}</version>
+			</dependency> -->
+
+
+			<!-- old version -->
+			<dependency>
+				<groupId>io.dubbo.springboot</groupId>
+				<artifactId>spring-boot-starter-dubbo</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>2.5.3</version>
+			</dependency>
+
+
+			<!-- zkclient -->
+			<dependency>
+				<groupId>com.github.sgroschupf</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>0.1</version>
+			</dependency>
+			<!-- zookeeper -->
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>3.3.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.netty</groupId>
+				<artifactId>netty</artifactId>
+				<version>3.2.5.Final</version>
+			</dependency>
+
+
+
+			<!-- <dependency>
+				<groupId>com.fasterxml.jackson</groupId>
+				<artifactId>jackson-bom</artifactId>
+				<version>2.10.3</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency> -->
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-parent</artifactId>
+				<!-- <version>2.2.6.RELEASE</version> -->
+				<version>1.5.10.RELEASE</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+
+			<!-- <dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>apache-curator</artifactId>
+				<version>4.3.0</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency> -->
+
+
+
+
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>flatten-maven-plugin</artifactId>
+					<configuration>
+						<updatePomFile>true</updatePomFile>
+						<flattenMode>resolveCiFriendliesOnly</flattenMode>
+					</configuration>
+					<executions>
+						<execution>
+							<id>flatten</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>flatten</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>flatten.clean</id>
+							<phase>clean</phase>
+							<goals>
+								<goal>clean</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<encoding>${project.build.sourceEncoding}</encoding>
+						<source>${project.build.jdk.version}</source>
+						<target>${project.build.jdk.version}</target>
+						<meminitial>512m</meminitial>
+						<maxmem>1024m</maxmem>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<inherited>true</inherited>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>flatten-maven-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>flatten</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+
+			</plugins>
+
+		</pluginManagement>
+
+	</build>
+
 </project>
