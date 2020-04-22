@@ -24,7 +24,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 
 @SpringBootApplication
-@ComponentScan("com.example.demo.*")
+//@ComponentScan("com.example.demo.*")
 public class ConsumerApplication {
 
     public static void main(String[] args) {

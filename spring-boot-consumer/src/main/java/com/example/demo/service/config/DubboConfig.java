@@ -17,9 +17,9 @@ import org.springframework.stereotype.Component;
 @Configuration
 public class DubboConfig {
 
-    @Value("${spring.dubbo.application.name}")
+    @Value("${dubbo.application.name}")
     private String name;
-    @Value("${spring.dubbo.registry.address}")
+    @Value("${dubbo.registry.address}")
     private String address;
 
     public String getName() {

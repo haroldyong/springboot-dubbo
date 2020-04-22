@@ -61,7 +61,7 @@ public class SampleController {
     }
 
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public int getIntCount(){
         return 100;
     }
