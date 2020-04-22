@@ -1,10 +1,9 @@
 package com.example.demo.service.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.example.demo.service.DemoService;
-
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.dubbo.config.annotation.Service;
 
 
 /**

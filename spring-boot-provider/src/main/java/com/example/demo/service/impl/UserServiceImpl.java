@@ -1,7 +1,7 @@
 package com.example.demo.service.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.example.demo.service.UserService;
+import org.apache.dubbo.config.annotation.Service;
 
 /**
  * <pre>
