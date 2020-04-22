@@ -2,10 +2,9 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
- * 访问地址：http://localhost:11000/core-consumer/home
+ * 访问地址：http://localhost:8083/home
  * 访问的JSON格式
  *      {
  *          "interfaceName": "com.example.demo.service.DemoService",
@@ -16,6 +15,8 @@ import org.springframework.context.annotation.ComponentScan;
  *                          "param_1":"231",
  *                          "ParamType_1":"java.lang.String",
  *                          "param_2":"FFFFFFF",
+ *                          "ParamType_3":"com.example.demo.service.domain.ComplexReqDto",
+                            "param_3":"{\"id\":100000,\"name\":\"harold\",\"level\":2,\"isMarried\":true}"
  *                                  ...
  *                                  ...
  *                                  ...
@@ -24,7 +25,6 @@ import org.springframework.context.annotation.ComponentScan;
  */
 
 @SpringBootApplication
-//@ComponentScan("com.example.demo.*")
 public class ConsumerApplication {
 
     public static void main(String[] args) {

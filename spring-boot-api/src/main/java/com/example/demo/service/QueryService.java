@@ -7,4 +7,6 @@ public interface QueryService {
 
     ResultEntry<ComplexReqDto> queryUser(ComplexReqDto complexReqDto);
 
+    ResultEntry<ComplexReqDto> queryUserWithIndex(Integer id,ComplexReqDto complexReqDto);
+
 }

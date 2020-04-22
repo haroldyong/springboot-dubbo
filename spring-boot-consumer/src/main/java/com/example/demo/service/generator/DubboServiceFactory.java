@@ -1,5 +1,6 @@
 package com.example.demo.service.generator;
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.demo.service.config.DubboConfig;
 import java.util.List;
 import java.util.Map;
@@ -61,11 +62,16 @@ public class DubboServiceFactory {
         Object[] invokeParams = new Object[len];
         for (int i = 0; i < len; i++) {
             invokeParamTypes[i] = (String) parameters.get(i).get("ParamType");
-            invokeParams[i] = parameters.get(i).get("param");
+            Object paramStr = parameters.get(i).get("param");
+            if (invokeParamTypes[i].equalsIgnoreCase("java.lang.Integer")
+                    || invokeParamTypes[i].equalsIgnoreCase("java.lang.String")) {
+                invokeParams[i] = paramStr;
+            } else {
+                invokeParams[i] = JSONObject.parse((String) paramStr);
+            }
         }
-       
 
-        return genericService.$invoke(methodName, invokeParamTypes, invokeParams);
+        return genericService.$invokeAsync(methodName, invokeParamTypes, invokeParams);
 
     }
 
