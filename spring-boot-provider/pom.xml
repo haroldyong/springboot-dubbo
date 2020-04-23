@@ -33,6 +33,18 @@
 		</dependency>
 
 
+<!--		<dependency>-->
+<!--			<groupId>org.apache.curator</groupId>-->
+<!--			<artifactId>curator-framework</artifactId>-->
+<!--		</dependency>-->
+
+
+		<!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
+<!--		<dependency>-->
+<!--			<groupId>org.apache.curator</groupId>-->
+<!--			<artifactId>curator-recipes</artifactId>-->
+<!--		</dependency>-->
+
 		<!-- Spring Boot dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -57,7 +69,7 @@
 		<dependency>
 			<groupId>com.alibaba.nacos</groupId>
 			<artifactId>nacos-client</artifactId>
-			
+
 		</dependency>
 
 
@@ -67,6 +79,9 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+
+
 
 
 	</dependencies>
