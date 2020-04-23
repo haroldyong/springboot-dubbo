@@ -70,7 +70,6 @@ public class DubboServiceFactory {
                 invokeParams[i] = JSONObject.parse((String) paramStr);
             }
         }
-
         return genericService.$invokeAsync(methodName, invokeParamTypes, invokeParams);
 
     }
