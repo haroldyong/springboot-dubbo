@@ -11,9 +11,14 @@ nacos server 使用1.1.4
 
 # 使用说明
 
-两种方式配置 zookeeper  & nacos
+### 两种注册中心  zookeeper  & nacos  任意使用
+只要修改application.properties 配置中的dubbo.registry.address 皆可
 
-测试调用
+### 使用nacos 配置中心
+
+在nacos配置中心，新建user.name  的 DataId.
+
+### 测试调用
 
 Post 
 
@@ -33,3 +38,6 @@ http://localhost:8083/home
 
 
 # 其他补充
+
+为什么要自己重新编译nacos的原因在于，nacos源码中还使用 google开源的httpclient古老的版本com.ning.http.client ,这个中间件是
+依赖netty3.x 版本，如果与zookeer 部署能兼容的话，是有包冲突的。所以我统一了netty版本

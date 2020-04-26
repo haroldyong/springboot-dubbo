@@ -34,6 +34,8 @@
 
 		<ali.fastjson.version>1.2.68</ali.fastjson.version>
 		<ali.ttl.version>2.11.4</ali.ttl.version>
+
+		<nacos-config-spring-boot.version>0.2.1</nacos-config-spring-boot.version>
 	</properties>
 
 
@@ -178,7 +180,7 @@
 				<version>${zookeeper.version}</version>
 			</dependency>
 
-	
+
 
 
 			<!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
@@ -187,20 +189,32 @@
 				<artifactId>curator-recipes</artifactId>
 				<version>${apache.curator.version}</version>
 			</dependency>
-			
-			     <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-framework</artifactId>
-                <version>${apache.curator.version}</version>
-            </dependency>
 
-           <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-client</artifactId>
-                <version>${apache.curator.version}</version>
-            </dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-framework</artifactId>
+				<version>${apache.curator.version}</version>
+			</dependency>
 
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-client</artifactId>
+				<version>${apache.curator.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.alibaba.boot</groupId>
+				<artifactId>nacos-config-spring-boot-starter</artifactId>
+				<version>${nacos-config-spring-boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba.boot</groupId>
+				<artifactId>nacos-config-spring-boot-actuator</artifactId>
+				<version>${nacos-config-spring-boot.version}</version>
+			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.alibaba.nacos/nacos-all -->
 			<dependency>
