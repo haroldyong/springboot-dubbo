@@ -11,8 +11,19 @@ nacos server 使用1.1.4
 
 # 使用说明
 
+
+
 ### 两种注册中心  zookeeper  & nacos  任意使用
 只要修改application.properties 配置中的dubbo.registry.address 皆可
+
+#### provider
+
+可以同时支持nacos和 zk 注册中心
+
+
+#### consumer
+
+同时只能实例化一个ref对象，如果需要同时使用zk 和 nacos的 服务。必须实例化两个ref
 
 ### 使用nacos 配置中心
 
